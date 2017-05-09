@@ -17,13 +17,11 @@
 		String password = request.getParameter("upass");
 		if (!(name == null || password == null || "".equals(password))) {
 			if ("crazy".equals(name) && "123456".equals(password)) {
-				/* response.setHeader("refresh", "2;URL=welcome.jsp");//实现定时跳转 */
+				response.setHeader("refresh", "2;URL=welcome.jsp");//实现定时跳转 
+				session.setAttribute("userid", name);
 	%>
 	<jsp:forward page="welcome.jsp"></jsp:forward>
-	<%
-		session.setAttribute("userid", name);
-			}
-	%>
+	
 	<h3>用户登录成功，两秒后跳转到欢迎页</h3>
 	<h3>
 		如果没有跳转，请按<a href="welcome.jsp">这里</a>
@@ -35,8 +33,9 @@
 	<%-- <%
 	/* response.setHeader("refresh","0;URL=logError.jsp");  */%> --%>
 	<jsp:forward page="logError.jsp"></jsp:forward>
+	<!-- <a href="logError.jsp">错误界面</a> -->
 	<%
-		}
+		}}
 	%>
 </body>
 </html>
