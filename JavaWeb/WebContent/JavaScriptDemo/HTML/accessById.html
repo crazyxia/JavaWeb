@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var accessById = function() {
+		alert(document.getElementById("a").innerHTML + "\n"
+				+ document.getElementById("b").value);
+	}
+</script>
+</head>
+<body>
+	<div id="a">疯狂java讲义</div>
+	<textarea id="b" rows="3" cols='25'>
+	轻量级Java EE企业实战
+	</textarea>
+	<input type="button" value="访问两个元素" onclick="accessById();" />
+</body>
+</html>
