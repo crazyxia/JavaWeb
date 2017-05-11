@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getForm</title>
+</head>
+<body>
+	<form action="http://www.crazyjava.cn" method="get">
+		当行文本框：<input id="username" name="username" type="text" /><br />
+		不能编辑的文本框：<input id="username2" name="username2" type="text"
+			readonly="readonly" /><br />
+		 密码框：<input id="password" name="password" type="password" /><br /> 
+		 隐藏域：<input id="hidden" name="hidden" type="hidden" /><br /> 
+		单选框： <br /> 
+		 <input id="color" name="color" type="radio" value="red" />
+		 <input id="color2" name="color" type="radio" value="green" />
+		 <input id="color3" name="color" type="radio" value="blue" /><br>
+		 <!-- 。浏览器并不是把一个＜form.. .／＞元素里所有的单选框都当成一组，而是把具有相同
+			name 属性的单选框当成一组，因此多个具有相同name 属性的单选框只能选中其中之一-->
+		 复选框：<br/> 
+		 <input id="website" name="website" type="checkbox" value="www.crazyjava.cn"/>
+		 <input id="website2" name="website" type="checkbox" value="www.baidu.com"/><br/>
+		 文件上传域：<br/>
+		 <input id="file" name="file" type="file"/>
+		 <!--img 标签的 alt 属性指定了替代文本，用于在图像无法显示或者用户禁用图像显示时，代替图像显示在浏览器中的内容。  -->
+		   图像域：<input type="image" src="" alt="就是无图片显示"/>
+		 下面为四个按钮：
+		 <input type="date"/>
+		 <input type="email"/>
+	</form>
+</body>
+</html>
