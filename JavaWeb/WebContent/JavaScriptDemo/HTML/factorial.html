@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var factorial=function(n){
+			if(typeof(n)=="number"){
+				if(n==1){
+					return 1;
+				}else{
+					return n*factorial(n-1);
+				}
+			}else{
+				alert("参数类型不对");
+			}
+		}	
+		alert(factorial(3));
+	</script>
+</body>
+</html>

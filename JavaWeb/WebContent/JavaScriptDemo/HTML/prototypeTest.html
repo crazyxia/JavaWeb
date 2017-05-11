@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Person(name, age) {
+			this.name = name;
+			this.age = age;
+			this.info = function() {
+				document.writeln("姓名：" + this.name);
+				document.writeln("年龄：" + this.age);
+			}
+		}
+		var p1 = new Person("lihua", 25);
+		p1.info();
+		Person.prototype.walk = function() {
+			document.writeln(this.name + 'slowly walk<br>')
+		}
+		var p2 = new Person("zhangsan", 35);
+		p2.info();
+		p2.walk();
+		p1.walk();
+	</script>
+</body>
+</html>

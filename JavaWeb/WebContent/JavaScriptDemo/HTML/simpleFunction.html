@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function judgeAge(age) {
+		if (typeof age == "number") {
+			if (age > 60) {
+				alert("老人");
+			} else if (age > 40) {
+				alert("小孩");
+			} else if (age > 15) {
+				alert("青少年");
+			} else {
+				alert("儿童");
+			}
+
+		} else {
+			alert("参数必须为数值");
+		}
+
+	}
+	judgeAge(95);
+</script>
+<body>
+</body>
+</html>
