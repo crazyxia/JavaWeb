@@ -12,7 +12,7 @@
 	<jsp:useBean id="student" class="com.javaWeb.bean.StudentBean"
 		scope="page" />
 	<c:catch var="error">
-		<c:set var="count" value="${param.c+1+0}" scope="page"/>
+		<c:set var="count" value="${param.c+1+0.0}" scope="page"/>
 			删除之前：变量count的值为：<c:out value="${count}" />
 		<br />
 		<c:remove var="count" scope="page" />
