@@ -8,19 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		pageContext.setAttribute("num", 10);
-	%>
-	<c:choose>
-		<c:when test=" ${num==10}">
-			<h3>num1的属性的内容是10</h3>
-		</c:when>
-		<c:when test="${num==20}">
-			<h3>num1的属性为20</h3>
-		</c:when>
-		<c:otherwise>
-			<h3>没有条件满足</h3>
-		</c:otherwise>
-	</c:choose>
+	<c:set var="info" value="www.crazyjav.cn" scope="request" />
+	<c:remove var="info" scope="request"/>
+	<h3>属性内容：${info}</h3>
 </body>
 </html>

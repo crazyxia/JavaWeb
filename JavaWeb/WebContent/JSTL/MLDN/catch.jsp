@@ -8,19 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		pageContext.setAttribute("num", 10);
-	%>
-	<c:choose>
-		<c:when test=" ${num==10}">
-			<h3>num1的属性的内容是10</h3>
-		</c:when>
-		<c:when test="${num==20}">
-			<h3>num1的属性为20</h3>
-		</c:when>
-		<c:otherwise>
-			<h3>没有条件满足</h3>
-		</c:otherwise>
-	</c:choose>
+	<c:catch var="errmsg">
+		<%
+			int result=10/0;		
+		%>
+	</c:catch>
+	<h3>异常信息：${errmsg} </h3>
 </body>
 </html>

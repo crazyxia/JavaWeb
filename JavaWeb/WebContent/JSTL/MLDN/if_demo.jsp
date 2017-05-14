@@ -8,19 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		pageContext.setAttribute("num", 10);
-	%>
-	<c:choose>
-		<c:when test=" ${num==10}">
-			<h3>num1的属性的内容是10</h3>
-		</c:when>
-		<c:when test="${num==20}">
-			<h3>num1的属性为20</h3>
-		</c:when>
-		<c:otherwise>
-			<h3>没有条件满足</h3>
-		</c:otherwise>
-	</c:choose>
+	<c:if test="${10<30}" var="res1">
+		<h3>10比30小</h3>
+	</c:if>
 </body>
 </html>
