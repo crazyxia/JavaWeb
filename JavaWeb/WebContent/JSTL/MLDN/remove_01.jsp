@@ -8,11 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:if test="${param.ref=='mldn'}" var="res1" scope="page">
-		<h3>欢迎${param.ref}</h3>
-	</c:if>
-	<c:if test="${10<30}" var="res1">
-		<h3>10比30小</h3>
-	</c:if>
+	<c:set var="info" value="www.crazyjava.cn" scope="request"/>
+	<c:remove var="info" scope="request"/>
+	<!--未完  -->
 </body>
 </html>

@@ -8,11 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:if test="${param.ref=='mldn'}" var="res1" scope="page">
-		<h3>欢迎${param.ref}</h3>
-	</c:if>
-	<c:if test="${10<30}" var="res1">
-		<h3>10比30小</h3>
-	</c:if>
+	<c:redirect url="redirect2.jsp">
+		<c:param name="userName" value="wangwu" />
+		<c:param name="password" value="123456" />
+	</c:redirect>
 </body>
 </html>
