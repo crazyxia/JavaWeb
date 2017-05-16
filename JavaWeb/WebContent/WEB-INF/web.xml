@@ -9,4 +9,21 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>ServletDemo</servlet-name>
+    <servlet-class>com.xinan.servlet.ServletDemo01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo</servlet-name>
+    <url-pattern>/ServletDemo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>MyLoginServletDemo</servlet-name>
+    <servlet-class>com.xinan.servlet.MyLoginServletDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyLoginServletDemo</servlet-name>
+    <url-pattern>/MyLoginServletDemo</url-pattern>
+  </servlet-mapping>
 </web-app>
