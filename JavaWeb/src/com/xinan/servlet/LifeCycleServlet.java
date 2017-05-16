@@ -1,19 +1,22 @@
 package com.xinan.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MyLoginServletDemo
+ * Servlet implementation class LifeCycleServlet
  */
-/* @WebServlet("/MyLoginServletDemo") */
-public class MyLoginServletDemo extends HttpServlet {
+/* @WebServlet("/LifeCycleServlet") */
+public class LifeCycleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
+	public void init() {
+		System.out.println("servlet初始化");
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -22,10 +25,9 @@ public class MyLoginServletDemo extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		/*
-		 * response.getWriter().append("Served at: ").append(request.
-		 * getContextPath());
-		 */
+		// response.getWriter().append("Served at:
+		// ").append(request.getContextPath());
+		System.out.println("servlet服务");
 	}
 
 	/**
@@ -35,23 +37,11 @@ public class MyLoginServletDemo extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		/*
-		 * doGet(request, response);
-		 */
-		response.setContentType("text/html;charset=utf-8");
-		PrintWriter out = response.getWriter();
-		out.println("<h2>调用了dopost方法</h2>");
-		String username = request.getParameter("username");
-		if (username == null || username == "") {
-			username = "未输入";
-		}
-		String userpwd = request.getParameter("password");
-		if (userpwd == null || userpwd == "") {
-			userpwd = "未输入";
-		}
-		out.println("<h2>用户名：" + username + "</h2>");
-		out.println("<h2>用户名：" + userpwd + "</h2>");
+		// doGet(request, response);
+	}
 
+	public void destroy() {
+		System.out.println("servlet销毁");
 	}
 
 }
