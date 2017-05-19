@@ -7,18 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>请输入用户信息：</h2>
-	<br>
-	<form action="<%=request.getContextPath()%>/MyLoginServletDemo"
-		method="post">
-		<label>用户名：</label>
+	<form action="<%=request.getContextPath()%>/ThreadSafe"
+		method="get">
 		<input type="text" name="username" />
-		<br>
-		<label>密&nbsp;&nbsp;&nbsp;码：</label>
-		<input type="password" name="password">
-		<br>
 		<input type="submit" value="提交">
-		<input type="reset" value="重置">
 	</form>
 </body>
 </html>
