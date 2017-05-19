@@ -16,7 +16,7 @@
   <servlet-mapping>
     <servlet-name>ServletDemo</servlet-name>
     <url-pattern>/ServletDemo</url-pattern>
-    <url-pattern>/ServletDemo1</url-pattern><!--测试多个url-pattern访问同一个资源         -->
+    <url-pattern>/ServletDemo1</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>MyLoginServletDemo</servlet-name>
