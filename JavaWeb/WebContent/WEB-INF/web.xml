@@ -34,4 +34,7 @@
     <servlet-name>life</servlet-name>
     <url-pattern>/LifeServlet</url-pattern>
   </servlet-mapping>
+  <session-config>
+    <session-timeout>0</session-timeout>
+  </session-config>
 </web-app>
