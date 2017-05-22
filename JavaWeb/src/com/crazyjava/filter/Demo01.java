@@ -10,22 +10,22 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 /**
- * Servlet Filter implementation class SimpleFilter
+ * Servlet Filter implementation class Demo01
  */
-//@WebFilter("/SimpleFilter")
-public class SimpleFilter implements Filter {
+//@WebFilter("/Demo01")
+public class Demo01 implements Filter {
 
+	
 	/**
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		String initParam=fConfig.getInitParameter("ref"); 
 	}
-    /**
+	/**
      * Default constructor. 
      */
-    public SimpleFilter() {
+    public Demo01() {
         // TODO Auto-generated constructor stub
     }
 
@@ -44,8 +44,8 @@ public class SimpleFilter implements Filter {
 		// place your code here
 
 		// pass the request along the filter chain
+		System.out.println("过滤器触发");
 		chain.doFilter(request, response);
 	}
-
 
 }

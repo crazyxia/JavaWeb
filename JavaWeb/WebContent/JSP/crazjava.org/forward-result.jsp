@@ -7,14 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form name="form1" method="post" action="loginReceive.jsp">
-		姓名
-		<input name="userName" type="text" size="12" />
-		<br> 密码
-		<input name="passWord" type="password" size=12 />
-		<br>
-		<input type="submit" name="submit" value="提交">
-		<input type="reset" name="submit2" value="重置">
-	</form>
+	<%=request.getParameter("age")%>
 </body>
 </html>

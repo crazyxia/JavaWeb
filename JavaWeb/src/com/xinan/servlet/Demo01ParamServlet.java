@@ -1,8 +1,6 @@
 package com.xinan.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloServlet
+ * Servlet implementation class Demo01ParamServlet
  */
-/* @WebServlet("/HelloServlet") */
-public class HelloServlet extends HttpServlet {
+/*@WebServlet("/Demo01ParamServlet")*/
+public class Demo01ParamServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public HelloServlet() {
+	public Demo01ParamServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,10 +31,6 @@ public class HelloServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		// response.getWriter().append("Served at:
 		// ").append(request.getContextPath());
-		response.setCharacterEncoding("UTF-8");
-		PrintWriter out = response.getWriter();
-		out.println("<h1>get请求将执行</h1>");
-
 	}
 
 	/**
@@ -46,8 +40,10 @@ public class HelloServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-		System.out.println("post请求被执行");
+		// doGet(request, response);
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		System.out.println("用户名" + username + "密码" + password);
 	}
 
 }

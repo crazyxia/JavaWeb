@@ -8,9 +8,13 @@
 </head>
 <body>
 	<form action="login.jsp" method="post">
-		用户名：<input type="text" name="uname"><br> 密&nbsp;&nbsp;码:<input
-			type="password" name="upass"><br> <input type="submit"
-			value="登录"> <input type="reset" value="重置">
+		用户名：
+		<input type="text" name="uname">
+		<br> 密&nbsp;&nbsp;码:
+		<input type="password" name="upass">
+		<br>
+		<input type="submit" value="登录">
+		<input type="reset" value="重置">
 	</form>
 	<%
 		String name = request.getParameter("uname");
@@ -20,8 +24,8 @@
 				response.setHeader("refresh", "2;URL=welcome.jsp");//实现定时跳转 
 				session.setAttribute("userid", name);
 	%>
-	<jsp:forward page="welcome.jsp"></jsp:forward>
-	
+	<%-- <jsp:forward page="welcome.jsp"></jsp:forward> --%>
+
 	<h3>用户登录成功，两秒后跳转到欢迎页</h3>
 	<h3>
 		如果没有跳转，请按<a href="welcome.jsp">这里</a>
@@ -35,7 +39,8 @@
 	<jsp:forward page="logError.jsp"></jsp:forward>
 	<!-- <a href="logError.jsp">错误界面</a> -->
 	<%
-		}}
+		}
+		}
 	%>
 </body>
 </html>
