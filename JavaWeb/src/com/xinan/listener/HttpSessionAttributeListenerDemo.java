@@ -43,7 +43,6 @@ public class HttpSessionAttributeListenerDemo implements HttpSessionAttributeLis
 		System.out.println("替换之前 属性名" + event.getName() + "属性值" + event.getValue());
 		System.out.println("替换之后  属性名" + event.getName() + "属性值" + event.getSession().getAttribute(event.getName()));
 
-
 	}
 
 }

@@ -46,6 +46,7 @@ public class Demo01 implements Filter {
 		// pass the request along the filter chain
 		System.out.println("过滤器触发");
 		chain.doFilter(request, response);
+		System.out.println("过滤器再次触发");
 	}
 
 }
